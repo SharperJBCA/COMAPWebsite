@@ -1,0 +1,16 @@
+<!-- app/templates/dashboard.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Main Dashboard</h1>
+    <ul>
+        <li><a href="{{ url_for('level1_index') }}">Level 1 Plots</a></li>
+        <li><a href="{{ url_for('level2_index') }}">Level 2 Plots</a></li>
+        <li><a href="{{ url_for('monthly_map_index') }}">Monthly Map Plots</a></li>
+        <!-- Add more links as required -->
+    </ul>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!-- app/templates/level2_plot_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Level 2 Plots for {{ observation}}</title>
+</head>
+<body>
+    <h1>Level 2 Plots for {{ observation}} </h1>
+
+    <h2>Available Plots for {{ observation }} of {{ source }} in {{ month }}</h2>
+<ul>
+    {% for plot in plots %}
+    <li>
+        <a href="{{ url_for('external_image', month=month, source=source, observation=observation, filename=plot) }}">
+            {{ plot }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('level2_observations', month=month, source=source) }}">Back to observations</a>
+<a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>

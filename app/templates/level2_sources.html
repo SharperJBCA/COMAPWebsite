@@ -1,0 +1,18 @@
+<!-- app/templates/level2_sources.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Level 2 Sources</title>
+</head>
+<body>
+    <h1>Level 2 Sources</h1>
+    <h2>Sources for {{ month }}</h2>
+    <ul>
+        {% for source in sources %}
+            <li><a href="{{ url_for('level2_observations', month=month, source=source) }}">{{ source }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('level2_index') }}">Back to months</a>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>

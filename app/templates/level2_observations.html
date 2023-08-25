@@ -1,0 +1,18 @@
+<!-- app/templates/level2_observations.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Level 2 Observations</title>
+</head>
+<body>
+    <h1>Level 2 Observations</h1>
+    <h2>Observations for {{ source }} in {{ month }}</h2>
+    <ul>
+        {% for observation in observations %}
+            <li><a href="{{ url_for('level2_plot_list', month=month, source=source, observation=observation) }}">{{ observation }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('level2_sources', month=month) }}">Back to sources</a>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>

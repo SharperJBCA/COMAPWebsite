@@ -1,0 +1,17 @@
+<!-- app/templates/level2_index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Level 2 Plots</title>
+</head>
+<body>
+    <h1>Level 2 Plots</h1>
+    <h3>Available Months</h3>
+    <ul>
+        {% for month in months %}
+            <li><a href="{{ url_for('level2_sources', month=month) }}">{{ month }}</a></li>
+        {% endfor %}
+    </ul>
+        <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>

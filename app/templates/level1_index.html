@@ -1,0 +1,24 @@
+<!-- app/templates/level1_index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Level 1 Plots</title>
+</head>
+<body>
+    <h1>Level 1 Plots</h1>
+    <ul>
+        <li><a href="{{ url_for('level1_plots', plot_type='mean_Tvane') }}">Mean Tvane Plot</a></li>
+        <li><a href="{{ url_for('level1_plots', plot_type='mean_Tshroud') }}">Mean Tshroud Plot</a></li>
+        <li><a href="{{ url_for('level1_plots', plot_type='mean_az') }}">Mean az Plot</a></li>
+        <li><a href="{{ url_for('level1_plots', plot_type='mean_el') }}">Mean el Plot</a></li>
+        <li><a href="{{ url_for('level1_plots', plot_type='mean_relative_humidity') }}">Mean Relative Humidity Plot</a></li>
+        <li><a href="{{ url_for('level1_plots', plot_type='mean_air_temp') }}">Mean Air Temp Plot</a></li>
+        <li><a href="{{ url_for('level1_plots', plot_type='mean_wind_speed') }}">Mean Wind Speed Plot</a></li>
+        <li><a href="{{ url_for('level1_plots', plot_type='mean_wind_direction') }}">Mean Wind Direction Plot</a></li>
+
+
+        <!-- Add more links for each column plot -->
+    </ul>
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+</body>
+</html>
